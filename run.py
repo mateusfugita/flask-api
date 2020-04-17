@@ -1,15 +1,16 @@
 import os
-from flask import Flask
+from flask import Flask, request
 from flask_cors import CORS
-import requests
+from controllers.essentials import *
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
+@app.route('/search', methods=['POST'])
 def superheroapi():
-    response = requests.get('https://superheroapi.com/api/1485166761657369/search/batman')
-    return response.text
+    data = request.get_json(force=True)
+    apikey = os.getenv("FLASK_APIKEY")
+    return searchHero(apikey, data["name"])
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
