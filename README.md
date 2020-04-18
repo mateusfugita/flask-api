@@ -6,7 +6,7 @@ This project was developed to learn about Flask (a lightweight WSGI web applicat
 - Python 3.+
 
 ### Access token
-1. Generate your access token here[https://superheroapi.com/].
+1. Generate your access token [here](https://superheroapi.com/).
 2. Create the .env file.
 ```
 cp .env.example .env
