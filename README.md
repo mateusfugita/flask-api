@@ -25,3 +25,10 @@ pip install -r requirements.txt
 ```
 python run.py
 ```
+
+### Request example
+```
+{
+  "name": "batman"
+}
+```
