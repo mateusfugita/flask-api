@@ -27,6 +27,7 @@ python run.py
 ```
 
 ### Request example
+- **/search**
 ```
 {
   "name": "batman"
